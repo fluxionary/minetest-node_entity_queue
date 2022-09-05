@@ -26,7 +26,8 @@ stds.node_entity_queue = {
 		"node_entity_queue",
 	},
 	read_globals = {
-		"minetest",
 		"action_queues",
+		"futil",
+		"minetest",
 	},
 }
