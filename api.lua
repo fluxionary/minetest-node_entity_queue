@@ -39,3 +39,5 @@ minetest.register_on_mods_loaded(function()
 		end
 	end
 end)
+
+node_entity_queue.api = api
