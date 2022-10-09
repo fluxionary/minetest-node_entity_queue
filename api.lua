@@ -13,13 +13,14 @@ function api.register_node_entity_loader(node_name, action)
 
 	else
 		api.action_by_node[node_name] = action
+		futil.add_groups(node_name, {node_entity_queue = 1})
 	end
 end
 
 minetest.register_lbm({
 	label = "load node entities",
 	name = "node_entity_queue:loader",
-	nodenames = api.registered_nodes,
+	nodenames = {"group:node_entity_queue"},
 	run_at_every_load = true,
 	action = function(pos, node)
 		local action = api.action_by_node[node.name]
@@ -36,8 +37,11 @@ minetest.register_on_mods_loaded(function()
 	for group, action in pairs(api.action_by_group) do
 		for _, item in ipairs(futil.get_items_with_group(group)) do
 			api.action_by_node[item] = action
+			futil.add_groups(item, {node_entity_queue = 1})
 		end
 	end
 end)
+
+-- TODO: need to also catch any calls to override_item
 
 node_entity_queue.api = api
