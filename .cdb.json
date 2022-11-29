@@ -1,0 +1,11 @@
+{
+    "type": "MOD",
+    "name": "node_entity_queue",
+    "title": "node entity queue",
+    "license": "AGPL-3.0-or-later",
+    "media_license": "CC-BY-SA-4.0",
+    "repo": "https://github.com/fluxionary/minetest-node_entity_queue.git",
+    "website": "https://github.com/fluxionary/minetest-node_entity_queue",
+    "issue_tracker": "https://github.com/fluxionary/minetest-node_entity_queue/issues",
+    "short_description": "a queue for spreading out the generation of node entities over multiple server steps (smartshops, signs, itemframes, etc)."
+}

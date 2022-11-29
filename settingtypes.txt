@@ -1,0 +1,11 @@
+# max microseconds to process the node entity queue, per server step
+node_entity_queue:us_per_step (us per step) float 45000 0
+
+# setting to 0 is the same as disabling this
+node_entity_queue:every_n_steps (every n server steps) int 0 0 inf
+
+# setting to 0 is the same as disabling this
+node_entity_queue:every_n_seconds (after every n seconds) float 0 0 inf
+
+# set to inf to allow unlimited
+node_entity_queue:num_per_step (max executions per step) float inf 1 inf

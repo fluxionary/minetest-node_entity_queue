@@ -1,6 +1,6 @@
 # node_entity_queue
 
-minetest mod which creates a common queue for updating "node entities", a term i use for non-physical
+creates a common queue for updating "node entities", a term i use for non-physical
 entities which are semantically bound to a specific node.
 
 ## api
